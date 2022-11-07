@@ -62,5 +62,72 @@ public void workingWithTableClass() {
 
     }
 
+  @Test
+    public void workingWithCarClass() {
+       CarClass firstCar = new CarClass();
+
+       firstCar.setCarColor("blue");
+       firstCar.setCarType("sedan");
+       firstCar.setCarYearProduced(2022);
+       firstCar.setGearboxType("manual");
+
+      System.out.println(firstCar.getCarColor());
+      System.out.println(firstCar.getCarType());
+      System.out.println(firstCar.getCarYearProduced());
+
+
+  }
+  @Test
+public void workingWithStudent() {
+      Student  firstStudent= new Student();
+
+      firstStudent.setFirstName("Jane");
+      firstStudent.setLastName("Done");
+      firstStudent.setEmail("jane19876.gmail.com");
+
+    System.out.println(firstStudent.getFirstName());
+    System.out.println(firstStudent.getEmail());
+    System.out.println(firstStudent.getLastName());
+
+}
+@Test
+public void workingWithMobileServiceUsageClass() {
+        MobileServiceUsageClass firstCustomer = new MobileServiceUsageClass();
+
+        firstCustomer.setIncomingMobileVoiceUsage(12);
+        firstCustomer.setInternetBucketUsage(123);
+        firstCustomer.setIncomingSmsAmount(15);
+
+    System.out.println(firstCustomer.getIncomingMobileVoiceUsage());
+    System.out.println(firstCustomer.getIncomingSmsAmount());
+}
+@Test
+public void workingWithDiscountClass() {
+       DiscountsClass firstDiscount = new DiscountsClass();
+
+       firstDiscount.setBusinessDiscounts("no");
+       firstDiscount.setHeritableDiscount(true);
+       firstDiscount.setTotalDiscount(50);
+
+    System.out.println(firstDiscount.getBusinessDiscounts());
+    System.out.println(firstDiscount.getTotalDiscount());
+    System.out.println(firstDiscount.getTotalDiscount());
+}
+@Test
+public void workingWithCustomerSegmentClass(){
+        CustomerSegmentClass firstCustomer = new CustomerSegmentClass();
+
+        firstCustomer.setCustomerSegment("small business");
+        firstCustomer.setAmountOfbillingAccounts(10);
+        firstCustomer.setAmountOfbillingAccounts(25);
+        firstCustomer.setNeedNumberInport(true);
+
+    System.out.println(firstCustomer.getCustomerSegment());
+    System.out.println(firstCustomer.getAmountOfbillingAccounts());
+    System.out.println(firstCustomer.getAmountOfrootAssets());
+
+
+
+}
 
 }

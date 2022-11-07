@@ -11,7 +11,6 @@ public class CarClass {
 
     public void setCarColor(String carColor) {
         this.carColor = carColor;
-
     }
 
     public int getCarYearProduced() {
