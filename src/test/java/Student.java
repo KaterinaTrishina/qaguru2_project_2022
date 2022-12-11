@@ -10,6 +10,17 @@ public class Student {
     private String phone;
 
 
+    public Student() {
+
+    }
+
+    public Student(String firstName, String lastName, String email, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -37,5 +48,16 @@ public class Student {
     public String getPhone() {
         return phone;
     }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    //-------------------------------------------CUSTOM METHODS-------------------
+    public String getFullName() {
+        return  firstName + " " + lastName;
+
+
+    }
+
 
 }
