@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -87,4 +88,12 @@ public class FirstSeleniumTest {
         browser.findElement(PICK_UP_DATE);
     }
 
-        }
+
+    //final By FILTER_OPTION = By.xpath(".//label[contains(@class, 'my-checkbox-label default filtering-event')]");
+   // for (WebElement we : browser.findElements(FILTER_OPTION)) {
+      //  if (we.getAttribute(:"data-text") equals("Gasoline)){
+                }
+
+    //}
+
+       // }
