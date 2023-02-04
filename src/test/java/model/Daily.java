@@ -12,11 +12,14 @@ public class Daily {
     private long moonset;
 
     @JsonProperty("moon_phase")
-    private double moonphase;
+    private double moonPhase;
 
     private Temp temp;
 
-    private FeelsLike feels_like;
+
+    @JsonProperty ("feels_like")
+    private FeelsLike feelsLike;
+
 
     private int pressure;
     private int humidity;
