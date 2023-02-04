@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class AmazonFindBookTest {
+public class AmazonUSFindGiftCardTest {
     private final By AMAZON_DONT_CHANGE_LOCATION_BTN = By.xpath(".//input[@data-action-type='DISMISS']");
     private final By AMAZON_GIFT_CART_BTN = By.xpath(".//*[contains (@ data-csa-c-content-id,'nav_cs_gc') ]");
     private final By GIFT_CARTS_FILTER_OPTION = By.xpath(".//div[@ class ='a-checkbox a-checkbox-fancy aok-float-left apb-browse-refinements-checkbox']");
