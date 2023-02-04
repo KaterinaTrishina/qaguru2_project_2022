@@ -13,5 +13,10 @@ public class WeatherResponse {
     private long timezoneOffset;
 
     private Current current;
+    private List <Minute> minutely;
+    private List <Hourly> hourly;
+    private List <Daily> daily;
+
+
 
 }

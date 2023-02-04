@@ -34,7 +34,6 @@ public class Current {
     private double windGust;
 
     private List<Weather>weather;
-    private List<Hourly>hourly;
 
 
     }

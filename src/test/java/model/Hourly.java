@@ -31,7 +31,7 @@ public class Hourly {
     @JsonProperty ("wind_gust")
     private double windGust;
 
-    private List<WeatherInHourly>weatherinhourly;
+    private List<Weather>weather;
 
     private double pop;
 
@@ -107,6 +107,14 @@ public class Hourly {
         this.visibility = visibility;
     }
 
+    public double getPop() {
+        return pop;
+    }
+
+    public void setPop(double pop) {
+        this.pop = pop;
+    }
+
     public double getWindSpeed() {
         return windSpeed;
     }
@@ -131,19 +139,12 @@ public class Hourly {
         this.windGust = windGust;
     }
 
-    public List<WeatherInHourly> getWeatherinhourly() {
-        return weatherinhourly;
+
+    public List<Weather> getWeather() {
+        return weather;
     }
 
-    public void setWeatherinhourly(List<WeatherInHourly> weatherinhourly) {
-        this.weatherinhourly = weatherinhourly;
-    }
-
-    public double getPop() {
-        return pop;
-    }
-
-    public void setPop(double pop) {
-        this.pop = pop;
+    public void setWeather(List<Weather> weather) {
+        this.weather = weather;
     }
 }
