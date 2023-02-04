@@ -89,11 +89,3 @@ public class FirstSeleniumTest {
     }
 
 
-    //final By FILTER_OPTION = By.xpath(".//label[contains(@class, 'my-checkbox-label default filtering-event')]");
-   // for (WebElement we : browser.findElements(FILTER_OPTION)) {
-      //  if (we.getAttribute(:"data-text") equals("Gasoline)){
-                }
-
-    //}
-
-       // }
