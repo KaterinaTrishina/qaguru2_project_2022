@@ -17,6 +17,8 @@ public class PassengerInfoPage {
 
     private final By RESERVATION_INFO = By.xpath(".//span[@class = 'bTxt']");
     private final By RESPONSE_BLOCK = By.id("response");
+
+    private final By BOOK_BTN = By.id("book2");
     private BaseFunc baseFunc;
 
     public PassengerInfoPage(BaseFunc baseFunc) {
@@ -64,6 +66,10 @@ public class PassengerInfoPage {
        return StringUtils.substringBetween(text,"for ", "EUR");
 
 
+    }
+
+    public void book(){
+        baseFunc.click(BOOK_BTN);
     }
 }
 
