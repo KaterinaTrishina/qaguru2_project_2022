@@ -1,4 +1,4 @@
-package model;
+package modelforweatherresponce;
 
 public class Minute {
     private long dt;

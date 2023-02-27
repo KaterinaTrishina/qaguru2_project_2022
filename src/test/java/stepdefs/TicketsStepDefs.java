@@ -3,7 +3,7 @@ package stepdefs;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import model.Reservation;
+import modelforweatherresponce.Reservation;
 import org.junit.jupiter.api.Assertions;
 import pageobject.BaseFunc;
 import pageobject.model.FlightInfo;

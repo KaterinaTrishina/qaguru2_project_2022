@@ -1,7 +1,6 @@
-package model;
+package modelforweatherresponce;
 
 import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonProperty;
-import jdk.nashorn.internal.objects.annotations.Property;
 
 import java.util.List;
 

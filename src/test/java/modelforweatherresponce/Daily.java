@@ -1,4 +1,4 @@
-package model;
+package modelforweatherresponce;
 
 import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonProperty;
 

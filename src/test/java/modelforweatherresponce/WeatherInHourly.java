@@ -1,6 +1,6 @@
-package model;
+package modelforweatherresponce;
 
-public class Weather {
+public class WeatherInHourly {
     private int id;
     private String main;
     private String description;

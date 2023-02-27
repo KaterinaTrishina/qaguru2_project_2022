@@ -3,7 +3,7 @@ package requestors;
 import io.cucumber.core.internal.com.fasterxml.jackson.core.JsonProcessingException;
 import io.cucumber.core.internal.com.fasterxml.jackson.core.type.TypeReference;
 import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
-import model.Reservation;
+import modelforweatherresponce.Reservation;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
