@@ -1,21 +1,21 @@
-package pageobject;
+package pageobject.model;
 
-public class Flightinfo {
+public class FlightInfo {
     private String destination;
     private String departure;
     private String discount;
-    private int adultCount;
+    private int adultsCount;
     private int childCount;
     private int bagsCount;
     private String flightDate;
     private int seatNr;
-    //private Passenger passenger;
+    private Passenger passenger;
 
-    public Flightinfo(String destination, String departure, String discount, int adultCount, int childCount, int bagsCount, String flightDate, int seatNr) {
+    public FlightInfo(String destination, String departure, String discount, int adultsCount, int childCount, int bagsCount, String flightDate, int seatNr) {
         this.destination = destination;
         this.departure = departure;
         this.discount = discount;
-        this.adultCount = adultCount;
+        this.adultsCount = adultsCount;
         this.childCount = childCount;
         this.bagsCount = bagsCount;
         this.flightDate = flightDate;
@@ -46,12 +46,12 @@ public class Flightinfo {
         this.discount = discount;
     }
 
-    public int getAdultCount() {
-        return adultCount;
+    public int getAdultsCount() {
+        return adultsCount;
     }
 
-    public void setAdultCount(int adultCount) {
-        this.adultCount = adultCount;
+    public void setAdultsCount(int adultsCount) {
+        this.adultsCount = adultsCount;
     }
 
     public int getChildCount() {
@@ -86,11 +86,11 @@ public class Flightinfo {
         this.seatNr = seatNr;
     }
 
-    //public Passenger getPassenger() {
-    //    return passenger;
+    public Passenger getPassenger() {
+        return passenger;
     }
 
-    //public void setPassenger(Passenger passenger) {
-        //this.passenger = passenger;
-    //}
-//}
+    public void setPassenger(Passenger passenger) {
+        this.passenger = passenger;
+    }
+}

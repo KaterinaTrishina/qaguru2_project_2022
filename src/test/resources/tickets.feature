@@ -2,7 +2,7 @@ Feature: Tickets reservation
 
   Scenario: Successful ticket reservation
     Given flight info:
-      | destination | JFK        |
+      | destination | SVO       |
       | departure   | RIX        |
       | discount    | bhjyuhuh   |
       | adults      | 1          |
@@ -19,7 +19,7 @@ Feature: Tickets reservation
     And seat number is 27
     And home page opened
 
-    When we areselecting airports
+    When we are selecting airports
     Then selected airports appears on the next page
 
     When we are filling in passenger registaration form

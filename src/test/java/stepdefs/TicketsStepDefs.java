@@ -26,7 +26,7 @@ public class TicketsStepDefs {
 
     @Given("flight info:")
     public void set_flight_info(Map<String,String> params) {
-        flightInfo = new FlightInfo(params.get("destination"), params.get("departure"),
+       // flightInfo = new FlightInfo(params.get("destination"), params.get("departure"),
                 params.get("discount"), Integer.parseInt(params.get("adults")),
                 Integer.parseInt(params.get("kids")), Integer.parseInt(params.get("bags")),
                 params.get("flight_date"), Integer.parseInt(params.get("seat")));
