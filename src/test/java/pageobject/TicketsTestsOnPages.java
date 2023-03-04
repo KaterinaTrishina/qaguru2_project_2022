@@ -1,9 +1,7 @@
 package pageobject;
 
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pageobject.model.FlightInfo;
@@ -13,14 +11,9 @@ import pageobject.pages.PassengerInfoPage;
 import pageobject.pages.SeatSelectionPage;
 import pageobject.pages.SuccessfulRegistrationPage;
 
-import java.util.Random;
-
 public class TicketsTestsOnPages {
     private final String URL = "qaguru.lv:8089/tickets/";
-
-
     private BaseFunc baseFunc = new BaseFunc();
-
     @Test
     public void successfulRegistrationTest() {
         Passenger passenger = new Passenger("TestName", "TestSurname");

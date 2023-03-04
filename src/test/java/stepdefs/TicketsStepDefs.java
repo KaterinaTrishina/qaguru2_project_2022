@@ -55,7 +55,7 @@ public class TicketsStepDefs {
 
     @Then("selected airports appears on the next page")
     public void check_airports() {
-        Assertions.assertEquals(flightInfo.getDeparture(), infoPage.getFirstFromAirport(), "Error msg!");
+        Assertions.assertEquals(flightInfo.getDeparture(), infoPage.getFirstFromAirport (), "Error msg!");
         Assertions.assertEquals(flightInfo.getDestination(), infoPage.getFirstToAirport(), "Error msg!");
     }
 
@@ -63,6 +63,17 @@ public class TicketsStepDefs {
     public void fill_in_passenger_form() {
         infoPage.fillInPassengerInfo(flightInfo);
     }
+
+        @Then("requesting price")
+        public void requesting_price() {
+        infoPage.clickGetPriceBtn();
+    }
+ @Then("passenger name airports appears")
+ public void passenger_name_verification() {
+        Assertions.assertEquals(flightInfo.getPassenger().getFirstName(),pass);
+
+ }
+
 
 
 
@@ -94,6 +105,12 @@ public class TicketsStepDefs {
 
     @Then("all reservation data is correct")
     public void check_reservation_data() {
-        //reservationFromApi is used here for assertions
+         Assertions.assertEquals(flightInfo.getPassenger().getLastName(), reservationFromApi.getSurname(), "Wrong Surname ");
+         Assertions.assertEquals(flightInfo.getPassenger().getFirstName(),reservationFromApi.getName()," Wrong Name");
+         Assertions.assertEquals(flightInfo.getDiscount(),reservationFromApi.getDiscount(),"Wrong Discount");
+         Assertions.assertEquals(flightInfo.getBagsCount(),reservationFromApi.getBagCount(),"Wrong Bags count");
+         Assertions.assertEquals(flightInfo.getAdultsCount(),reservationFromApi.getAdults(),"Wrong adults count");
+         Assertions.assertEquals(flightInfo.getChildCount(),reservationFromApi.getChildren(),"Wrong kids count");
+
     }
 }

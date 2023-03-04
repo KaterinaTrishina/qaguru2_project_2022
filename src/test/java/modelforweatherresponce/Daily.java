@@ -84,11 +84,11 @@ public class Daily {
     }
 
     public double getMoonphase() {
-        return moonphase;
+        return moonPhase;
     }
 
     public void setMoonphase(double moonphase) {
-        this.moonphase = moonphase;
+        this.moonPhase = moonphase;
     }
 
     public Temp getTemp() {
@@ -100,11 +100,11 @@ public class Daily {
     }
 
     public FeelsLike getFeels_like() {
-        return feels_like;
+        return feelsLike;
     }
 
     public void setFeels_like(FeelsLike feels_like) {
-        this.feels_like = feels_like;
+        this.feelsLike= feels_like;
     }
 
     public int getPressure() {
