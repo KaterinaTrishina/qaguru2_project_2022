@@ -22,11 +22,11 @@ Feature: Tickets reservation
     When we are selecting airports
     Then selected airports appears on the next page
 
-    When we are filling in passenger registaration form
+    When we are filling in passenger registration form
     And requesting price
 
     Then passenger name airports appears
-    And price is 500 EUR
+    And price is 2180 EUR
 
     When we are pressing Book button
     And selecting seat

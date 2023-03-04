@@ -16,11 +16,11 @@ public class PassengerInfoPage {
     private final By GET_PRICE_LINK = By.xpath(".//span[@onclick = 'setLang();']");
 
     private final By RESERVATION_INFO = By.xpath(".//span[@class = 'bTxt']");
-    private final By RESPONSE_BLOCK = By.id("response");
 
     private final By BOOK_BTN = By.id("book2");
     private final By GET_PRICE_BTN = By.xpath(".//span[@onclick = 'setLang();']");
     private final By GET_PRICE_RESPONSE = By.id("response");
+
 
     private BaseFunc baseFunc;
 
@@ -82,13 +82,12 @@ public class PassengerInfoPage {
 
     }
     public String getPrice(){
-        String text = baseFunc.findElement(RESPONSE_BLOCK).getText();
+        String text = baseFunc.findElement(GET_PRICE_RESPONSE).getText();
        return StringUtils.substringBetween(text,"for ", "EUR");
 
 
     }
-
-    public void book(){
+    public void pressBookBtn(){
         baseFunc.click(BOOK_BTN);
     }
 }

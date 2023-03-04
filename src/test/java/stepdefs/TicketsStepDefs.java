@@ -70,9 +70,22 @@ public class TicketsStepDefs {
     }
  @Then("passenger name airports appears")
  public void passenger_name_verification() {
-        Assertions.assertEquals(flightInfo.getPassenger().getFirstName(),pass);
+        Assertions.assertEquals(flightInfo.getPassenger().getFirstName(),infoPage.getPassengerName(),"Wrong passenger's name ");
+
 
  }
+ @Then("price is {int} EUR")
+ public void price_verification(int price) {
+        Assertions.assertEquals(price, infoPage.getPrice(),"Wrong Price");
+
+ }
+ @When("we are pressing Book button")
+ public void press_book_btn() {
+        infoPage.pressBookBtn();
+ }
+@When("selecting seat")
+
+
 
 
 
