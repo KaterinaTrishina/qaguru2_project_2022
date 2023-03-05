@@ -11,7 +11,7 @@ Feature: Tickets reservation
       | flight_date | 14-05-2023 |
       | seat        | 27         |
 
-    And pasanger info is:
+    And passanger info is:
       | first_name | random   |
       | last_name  | Trishin |
 

@@ -11,6 +11,8 @@ import pageobject.model.FlightInfo;
 import pageobject.model.Passenger;
 import pageobject.pages.HomePage;
 import pageobject.pages.PassengerInfoPage;
+import pageobject.pages.SeatSelectionPage;
+import pageobject.pages.SuccessfulRegistrationPage;
 import requestors.TicketsRequester;
 
 import java.util.List;
@@ -20,6 +22,8 @@ public class TicketsStepDefs {
     private FlightInfo flightInfo; //null
     private HomePage homePage; //null
     private PassengerInfoPage infoPage; //null
+    private SeatSelectionPage seatSelectionPage;
+    private SuccessfulRegistrationPage successfulRegistrationPage;
     private List<Reservation> reservations;
     private Reservation reservationFromApi; //null
 
@@ -68,41 +72,49 @@ public class TicketsStepDefs {
         public void requesting_price() {
         infoPage.clickGetPriceBtn();
     }
- @Then("passenger name airports appears")
- public void passenger_name_verification() {
+     @Then("passenger name airports appears")
+      public void passenger_name_verification() {
         Assertions.assertEquals(flightInfo.getPassenger().getFirstName(),infoPage.getPassengerName(),"Wrong passenger's name ");
 
 
  }
- @Then("price is {int} EUR")
- public void price_verification(int price) {
+      @Then("price is {int} EUR")
+      public void price_verification(int price) {
         Assertions.assertEquals(price, infoPage.getPrice(),"Wrong Price");
 
  }
- @When("we are pressing Book button")
- public void press_book_btn() {
+      @When("we are pressing Book button")
+        public void press_book_btn() {
         infoPage.pressBookBtn();
+        seatSelectionPage = new SeatSelectionPage(baseFunc);
+
  }
-@When("selecting seat")
+      @When("selecting seat")
+       public void select_seat() {
+    seatSelectionPage.selectSeat(flightInfo.getSeatNr());
+}
 
+    @Then("correct seat number appears")
+    public void check_seat_nr() {
+        Assertions.assertEquals(flightInfo.getSeatNr(), seatSelectionPage.getSelectedSearNr(), "Seat nr is not correct!");
+    }
 
+    @When("we are booking selected ticket")
+    public void click_book_btn() {
+    seatSelectionPage.pressBookBtn();
+    successfulRegistrationPage = new SuccessfulRegistrationPage(baseFunc);
+    }
 
-
-
-
-
-
-
-
-
+    @Then("successful registration message appears")
+    public void check_if_success() {
+        Assertions.assertTrue(successfulRegistrationPage.isSuccessfulRegistrationTextAppears(), "Reservation isn't successful!");
+    }
 
     @When("we are requesting reservations data")
     public void request_reservations() throws JsonProcessingException {
         TicketsRequester requester = new TicketsRequester();
         reservations = requester.getReservations();
     }
-
-
 
     @Then("current reservation is in the list")
     public void find_reservation() {
